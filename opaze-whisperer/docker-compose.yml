@@ -1,0 +1,22 @@
+name: opaze-whisperer-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: opaze-whisperer
+      FLAG: "rctf{@d_as7r@_per_4SPERA_b639cc123ee69bcfb76ffedb}"
+    container_name: opaze-whisperer
+    image: opaze-whisperer
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

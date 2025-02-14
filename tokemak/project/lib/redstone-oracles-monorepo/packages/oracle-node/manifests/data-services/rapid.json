@@ -1,0 +1,331 @@
+{
+  "interval": 10000,
+  "priceAggregator": "median",
+  "defaultSource": ["coingecko"],
+  "sourceTimeout": 50000,
+  "minValidSourcesPercentage": 10,
+  "deviationCheck": {
+    "deviationWithRecentValues": {
+      "maxPercent": 25,
+      "maxDelayMilliseconds": 300000
+    }
+  },
+  "tokens": {
+    "BTC": {
+      "source": [
+        "band",
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "ETH": {
+      "source": [
+        "band",
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "dia",
+        "gate-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "USDT": {
+      "source": [
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "gate-usd",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd"
+      ]
+    },
+    "BNB": {
+      "source": [
+        "binance-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coingecko",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "DOGE": {
+      "source": [
+        "binance-usdt",
+        "bitfinex2-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "XRP": {
+      "source": [
+        "binance-usdt",
+        "bitfinex2-usd",
+        "bitstamp-usd",
+        "coingecko",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "ADA": {
+      "source": [
+        "binance-usdt",
+        "bitfinex2-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "kraken-usd",
+        "kucoin-usdt",
+        "okx-usdt"
+      ]
+    },
+    "DOT": {
+      "source": [
+        "binance-usdt",
+        "bitfinex2-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "XLM": {
+      "source": [
+        "binance-usdt",
+        "bitfinex2-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "kraken-usd",
+        "kucoin-usdt",
+        "okx-usdt"
+      ]
+    },
+    "AR": {
+      "source": [
+        "binance-btc",
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bybit-usdt",
+        "coingecko",
+        "gate-usdt",
+        "kucoin-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "CELO": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "coingecko",
+        "gate-usdt",
+        "kucoin-usdt",
+        "mento",
+        "okx-usdt"
+      ]
+    },
+    "CELO/EUR": {
+      "source": ["mento", "non-usd-based"]
+    },
+    "CELO/BRL": {
+      "source": ["mento", "non-usd-based"]
+    },
+    "EUROC": {
+      "source": [
+        "coingecko",
+        "trader-joe-v2-avalanche-usdc",
+        "uniswap-v3-ethereum-usdc-500"
+      ]
+    },
+    "EUROC/EUR": {
+      "source": ["mento", "non-usd-based"]
+    },
+    "USDC/BRL": {
+      "source": ["mento", "non-usd-based"]
+    },
+    "USDC/EUR": {
+      "source": ["mento", "non-usd-based"]
+    },
+    "AVAX": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "gate-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "USDC": {
+      "source": [
+        "balancer-arbitrumone-usdt",
+        "balancer-ethereum-usdt",
+        "binance-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coingecko",
+        "curve-ethereum-dai",
+        "curve-ethereum-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usdt",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "mento",
+        "okx-usdt",
+        "uniswap-v3-ethereum-dai-100"
+      ]
+    },
+    "DAI": {
+      "source": [
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "bybit-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "curve-ethereum-usdt",
+        "gate-usdt",
+        "kraken-usd",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "FXS": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdc",
+        "bitrue-usdt",
+        "coingecko",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "FRAX": {
+      "source": [
+        "curve-ethereum-3crv",
+        "curve-ethereum-sdai",
+        "curve-ethereum-usdc-multi-block",
+        "fraxswap-ethereum-fxs",
+        "fraxswap-ethereum-weth",
+        "uniswap-v3-ethereum-dai-500",
+        "uniswap-v3-ethereum-fxs-10000",
+        "uniswap-v3-ethereum-usdc-500"
+      ],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "EUR": {
+      "source": [
+        "binance-usdt",
+        "bitstamp-api",
+        "bitstamp-usd",
+        "coinbase-api",
+        "ecb",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-gbp",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "GBP": {
+      "source": [
+        "alphavantage-usd",
+        "bitstamp-usd",
+        "ecb",
+        "financialmodelingprep-usd",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "BRL": {
+      "source": [
+        "binance-api",
+        "bitso-api",
+        "ecb",
+        "kucoin-api",
+        "mercado-api",
+        "twelve-data"
+      ]
+    },
+    "ETH/USDC": {
+      "source": ["non-usd-based"]
+    },
+    "3Crv": {
+      "source": ["ethereum-evm-fetcher-curve"]
+    },
+    "sDAI": {
+      "source": ["ethereum-evm-fetcher-savings-dai"],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    }
+  }
+}

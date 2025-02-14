@@ -1,0 +1,22 @@
+name: casino-avengers-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: casino-avengers
+      FLAG: "rctf{@lic3_u_C4n_d0_b3tT3r_th4n_th1S_bdc7bb482720bc332ba3cd5b}"
+    container_name: casino-avengers
+    image: casino-avengers
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

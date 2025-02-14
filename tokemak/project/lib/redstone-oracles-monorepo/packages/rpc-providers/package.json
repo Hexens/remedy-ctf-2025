@@ -1,0 +1,60 @@
+{
+  "name": "@redstone-finance/rpc-providers",
+  "version": "0.6.2",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "test": "REDSTONE_FINANCE_LOG_LEVEL=0 NODE_ENV=test hardhat test",
+    "test:rpc-urls": "NODE_ENV=test IS_CI=true hardhat test test/chains-configs/chains-configs-rpc-urls.test.ts",
+    "test:chains-configs": "NODE_ENV=test IS_CI=true hardhat test test/chains-configs/chains-configs.test.ts",
+    "build": "yarn compile && yarn global:tsc --build tsconfig.build.json",
+    "build-dev": "yarn compile && yarn global:tsc --build tsconfig.json",
+    "build-deps": "yarn --cwd ../chain-configs build",
+    "compile": "yarn build-deps && hardhat compile",
+    "clean": "rm -rf dist artifacts cache typechain-types",
+    "preversion": "yarn build",
+    "lint": "yarn global:eslint . && yarn global:prettier --check src/**/*.json",
+    "lint:fix": "yarn global:eslint --fix . && yarn global:prettier --write src/**/*.json"
+  },
+  "dependencies": {
+    "@ethersproject/abstract-provider": "^5.7.0",
+    "@ethersproject/logger": "^5.7.0",
+    "@ethersproject/properties": "^5.7.0",
+    "@influxdata/influxdb-client": "^1.35.0",
+    "@redstone-finance/chain-configs": "0.6.2",
+    "@redstone-finance/evm-multicall": "0.6.2",
+    "@redstone-finance/utils": "0.6.2",
+    "axios": "^1.7.7",
+    "ethers": "^5.7.2",
+    "lodash": "^4.17.21",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@ethersproject/abi": "^5.6.3",
+    "@ethersproject/providers": "^5.6.8",
+    "@nomicfoundation/hardhat-chai-matchers": "1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.9",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/chai": "^4.3.4",
+    "@types/lodash": "^4.14.195",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.14.12",
+    "@types/sinon": "^10.0.15",
+    "chai": "^4.3.10",
+    "hardhat": "^2.17.2",
+    "hardhat-gas-reporter": "^1.0.9",
+    "sinon": "^15.0.3",
+    "solidity-coverage": "^0.8.12",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.1.1",
+    "typescript": "^5.5.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

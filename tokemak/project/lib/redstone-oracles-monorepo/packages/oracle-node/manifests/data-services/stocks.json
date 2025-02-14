@@ -1,0 +1,348 @@
+{
+  "interval": 60000,
+  "priceAggregator": "median",
+  "defaultSource": ["coingecko"],
+  "sourceTimeout": 30000,
+  "minValidSourcesPercentage": 10,
+  "deviationCheck": {
+    "deviationWithRecentValues": {
+      "maxPercent": 25,
+      "maxDelayMilliseconds": 300000
+    }
+  },
+  "tokens": {
+    "TSLA": {
+      "source": ["twelve-data"]
+    },
+    "AAPL": {
+      "source": ["twelve-data"]
+    },
+    "IBM": {
+      "source": ["twelve-data"]
+    },
+    "AMZN": {
+      "source": ["twelve-data"]
+    },
+    "GOOG": {
+      "source": ["twelve-data"]
+    },
+    "COST": {
+      "source": ["twelve-data"]
+    },
+    "DIS": {
+      "source": ["twelve-data"]
+    },
+    "MA": {
+      "source": ["twelve-data"]
+    },
+    "MSFT": {
+      "source": ["twelve-data"]
+    },
+    "NFLX": {
+      "source": ["twelve-data"]
+    },
+    "NKE": {
+      "source": ["twelve-data"]
+    },
+    "PINS": {
+      "source": ["twelve-data"]
+    },
+    "SHOP": {
+      "source": ["twelve-data"]
+    },
+    "SPOT": {
+      "source": ["twelve-data"]
+    },
+    "TDOC": {
+      "source": ["twelve-data"]
+    },
+    "SPY": {
+      "source": ["twelve-data"]
+    },
+    "QQQ": {
+      "source": ["twelve-data"]
+    },
+    "ONEQ": {
+      "source": ["twelve-data"]
+    },
+    "IWM": {
+      "source": ["twelve-data"]
+    },
+    "EFA": {
+      "source": ["twelve-data"]
+    },
+    "VGK": {
+      "source": ["twelve-data"]
+    },
+    "INDA": {
+      "source": ["twelve-data"]
+    },
+    "RSX": {
+      "source": ["twelve-data"]
+    },
+    "CRUDE": {
+      "source": ["twelve-data"]
+    },
+    "XAU": {
+      "source": ["financialmodelingprep-usd", "finhub-usd", "twelve-data"]
+    },
+    "SILVER": {
+      "source": ["twelve-data"]
+    },
+    "GBP": {
+      "source": [
+        "alphavantage-usd",
+        "bitstamp-usd",
+        "ecb",
+        "financialmodelingprep-usd",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "AUD": {
+      "source": ["ecb", "kraken-usd", "twelve-data"]
+    },
+    "CHF": {
+      "source": ["twelve-data"]
+    },
+    "EUR": {
+      "source": [
+        "binance-usdt",
+        "bitstamp-api",
+        "bitstamp-usd",
+        "coinbase-api",
+        "ecb",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-gbp",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "JPY": {
+      "source": ["twelve-data"]
+    },
+    "MXN": {
+      "source": ["twelve-data"]
+    },
+    "ARS": {
+      "source": ["twelve-data"]
+    },
+    "PEN": {
+      "source": ["twelve-data"]
+    },
+    "BRL": {
+      "source": [
+        "binance-api",
+        "bitso-api",
+        "ecb",
+        "kucoin-api",
+        "mercado-api",
+        "twelve-data"
+      ]
+    },
+    "COP": {
+      "source": ["alphavantage-usd", "financialmodelingprep-usd", "twelve-data"]
+    },
+    "BBBY": {
+      "source": ["twelve-data"]
+    },
+    "UPST": {
+      "source": ["twelve-data"]
+    },
+    "BIG": {
+      "source": ["twelve-data"]
+    },
+    "MSTR": {
+      "source": ["twelve-data"]
+    },
+    "BYND": {
+      "source": ["twelve-data"]
+    },
+    "HRTX": {
+      "source": ["twelve-data"]
+    },
+    "EVGO": {
+      "source": ["twelve-data"]
+    },
+    "BGFV": {
+      "source": ["twelve-data"]
+    },
+    "FUBO": {
+      "source": ["twelve-data"]
+    },
+    "CVNA": {
+      "source": ["twelve-data"]
+    },
+    "NKLA": {
+      "source": ["twelve-data"]
+    },
+    "W": {
+      "source": ["twelve-data"]
+    },
+    "BLNK": {
+      "source": ["twelve-data"]
+    },
+    "SRG": {
+      "source": ["twelve-data"]
+    },
+    "HYZN": {
+      "source": ["twelve-data"]
+    },
+    "MVIS": {
+      "source": ["twelve-data"]
+    },
+    "PETS": {
+      "source": ["twelve-data"]
+    },
+    "IBRX": {
+      "source": ["twelve-data"]
+    },
+    "VUZI": {
+      "source": ["twelve-data"]
+    },
+    "SPCE": {
+      "source": ["twelve-data"]
+    },
+    "RIDE": {
+      "source": ["twelve-data"]
+    },
+    "FUV": {
+      "source": ["twelve-data"]
+    },
+    "WKHS": {
+      "source": ["twelve-data"]
+    },
+    "SWTX": {
+      "source": ["twelve-data"]
+    },
+    "LCID": {
+      "source": ["twelve-data"]
+    },
+    "JWN": {
+      "source": ["twelve-data"]
+    },
+    "FFIE": {
+      "source": ["twelve-data"]
+    },
+    "SFT": {
+      "source": ["twelve-data"]
+    },
+    "OCGN": {
+      "source": ["twelve-data"]
+    },
+    "REI": {
+      "source": ["twelve-data"]
+    },
+    "BKKT": {
+      "source": ["twelve-data"]
+    },
+    "KPTI": {
+      "source": ["twelve-data"]
+    },
+    "DNMR": {
+      "source": ["twelve-data"]
+    },
+    "GDRX": {
+      "source": ["twelve-data"]
+    },
+    "IGMS": {
+      "source": ["twelve-data"]
+    },
+    "GME": {
+      "source": ["twelve-data"]
+    },
+    "AMC": {
+      "source": ["twelve-data"]
+    },
+    "META": {
+      "source": ["twelve-data"]
+    },
+    "DIA.ETF": {
+      "source": ["twelve-data"]
+    },
+    "SPX": {
+      "source": ["twelve-data"]
+    },
+    "EUROSTOXX50": {
+      "source": ["twelve-data"]
+    },
+    "NASDAQ": {
+      "source": ["twelve-data"]
+    },
+    "USDT": {
+      "source": [
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "gate-usd",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd"
+      ]
+    },
+    "USDC": {
+      "source": [
+        "balancer-arbitrumone-usdt",
+        "balancer-ethereum-usdt",
+        "binance-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coingecko",
+        "curve-ethereum-dai",
+        "curve-ethereum-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usdt",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "uniswap-v3-ethereum-dai-100"
+      ]
+    },
+    "DAI": {
+      "source": [
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "bybit-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "curve-ethereum-usdt",
+        "gate-usdt",
+        "kraken-usd",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "ETH": {
+      "source": [
+        "band",
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "dia",
+        "gate-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    }
+  }
+}

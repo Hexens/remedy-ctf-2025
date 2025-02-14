@@ -1,0 +1,901 @@
+{
+  "interval": 10000,
+  "priceAggregator": "median",
+  "defaultSource": ["coingecko"],
+  "sourceTimeout": 7000,
+  "minValidSourcesPercentage": 1,
+  "deviationCheck": {
+    "deviationWithRecentValues": {
+      "maxPercent": 30,
+      "maxDelayMilliseconds": 300000
+    }
+  },
+  "tokens": {
+    "ETH": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "USDC": {
+      "source": [
+        "balancer-arbitrumone-usdt",
+        "balancer-ethereum-usdt",
+        "binance-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coingecko",
+        "coinmarketcap",
+        "curve-ethereum-dai",
+        "curve-ethereum-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usdt",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "uniswap-v3-ethereum-dai-100"
+      ],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "sUSDe": {
+      "source": ["ethereum-evm-fetcher-ethena"],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "USDC.e": {
+      "source": [
+        "camelot-v3-arbitrumone-usdc",
+        "curve-arbitrumone-usdt",
+        "uniswap-v3-arbitrumone-arb-3000",
+        "uniswap-v3-arbitrumone-arb-500",
+        "uniswap-v3-arbitrumone-dai-500",
+        "uniswap-v3-arbitrumone-usdc-100",
+        "uniswap-v3-arbitrumone-usdt-100",
+        "uniswap-v3-arbitrumone-weth-3000",
+        "uniswap-v3-arbitrumone-weth-500"
+      ],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "USDT": {
+      "source": [
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usd",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd"
+      ],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "EUR": {
+      "source": [
+        "binance-usdt",
+        "bitstamp-api",
+        "bitstamp-usd",
+        "coinbase-api",
+        "ecb",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-gbp",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "GBP": {
+      "source": [
+        "alphavantage-usd",
+        "bitstamp-usd",
+        "ecb",
+        "financialmodelingprep-usd",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "BTC": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "BNB": {
+      "source": [
+        "binance-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coingecko",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "XRP": {
+      "source": [
+        "binance-usdt",
+        "bitfinex2-usd",
+        "bitstamp-usd",
+        "coingecko",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "GMX": {
+      "source": [
+        "binance-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "okx-usdt"
+      ]
+    },
+    "DAI": {
+      "source": [
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "bitstamp-usd",
+        "bybit-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "curve-ethereum-usdt",
+        "gate-usdt",
+        "kraken-usd",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "FXS": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdc",
+        "bitrue-usdt",
+        "coingecko",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "FRAX": {
+      "source": [
+        "curve-ethereum-3crv",
+        "curve-ethereum-sdai",
+        "curve-ethereum-usdc-multi-block",
+        "fraxswap-ethereum-fxs",
+        "fraxswap-ethereum-weth",
+        "uniswap-v3-ethereum-dai-500",
+        "uniswap-v3-ethereum-fxs-10000",
+        "uniswap-v3-ethereum-usdc-500"
+      ],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "UNI": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "uniswap-v3-ethereum-weth-3000",
+        "xt"
+      ]
+    },
+    "LINK": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "uniswap-v3-ethereum-weth-3000",
+        "xt"
+      ]
+    },
+    "ARB": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "uniswap-v3-arbitrumone-weth-3000",
+        "uniswap-v3-arbitrumone-weth-500"
+      ]
+    },
+    "CRV": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "GLP": {
+      "source": ["arbitrum-evm-fetcher-glp-manager"]
+    },
+    "WBTC": {
+      "source": [
+        "binance-btc",
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitrue-btc",
+        "bybit-btc",
+        "coinbasepro-btc",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "curve-arbitrumone-weth",
+        "gate-btc",
+        "kraken-btc",
+        "kraken-usd",
+        "kucoin-btc",
+        "okx-btc",
+        "okx-usdt",
+        "uniswap-v3-arbitrumone-weth-500",
+        "uniswap-v3-ethereum-weth-3000",
+        "uniswap-v3-ethereum-weth-500"
+      ],
+      "skipBroadcasting": true
+    },
+    "wstETH": {
+      "source": [
+        "balancer-arbitrumone-weth",
+        "balancer-arbitrumone-weth-2",
+        "balancer-ethereum-aave",
+        "balancer-ethereum-weth",
+        "balancer-ethereum-weth-2",
+        "balancer-ethereum-weth-3",
+        "camelot-v3-arbitrumone-weth",
+        "curve-ethereum-wbtc",
+        "pancake-swap-ethereum-weth-100",
+        "uniswap-v3-arbitrumone-weth-100",
+        "uniswap-v3-ethereum-weth-100",
+        "uniswap-v3-optimism-weth-100",
+        "velodrome-cl-optimism-weth-100"
+      ]
+    },
+    "AVAX": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kaiko",
+        "kaiko-v2",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "JOE": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "okx-usdt",
+        "trader-joe-v1-avalanche-wavax",
+        "trader-joe-v2-avalanche-wavax",
+        "xt"
+      ]
+    },
+    "BAL": {
+      "source": [
+        "balancer-ethereum-weth",
+        "binance-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "MOO_GMX": {
+      "source": ["arbitrum-evm-fetcher-beefy"]
+    },
+    "YY_WOMBEX_USDT": {
+      "source": ["arbitrum-evm-fetcher-yield-yak"],
+      "decimals": 20
+    },
+    "YY_WOMBEX_USDC.e": {
+      "source": ["arbitrum-evm-fetcher-yield-yak"],
+      "decimals": 20
+    },
+    "YY_WOMBEX_GLP": {
+      "source": ["arbitrum-evm-fetcher-yield-yak"]
+    },
+    "YY_WOMBEX_DAI": {
+      "source": ["arbitrum-evm-fetcher-yield-yak"]
+    },
+    "arbJnrLLP": {
+      "source": ["arbitrum-evm-fetcher-level-finance"]
+    },
+    "arbMzeLLP": {
+      "source": ["arbitrum-evm-fetcher-level-finance"]
+    },
+    "arbSnrLLP": {
+      "source": ["arbitrum-evm-fetcher-level-finance"]
+    },
+    "LVL": {
+      "source": ["coingecko", "coinmarketcap"]
+    },
+    "MAGIC": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "uniswap-v3-arbitrumone-weth-3000",
+        "xt"
+      ]
+    },
+    "GRAIL": {
+      "source": [
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt"
+      ]
+    },
+    "STG": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "xt"
+      ]
+    },
+    "WOO": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt"
+      ]
+    },
+    "SWETH": {
+      "source": [
+        "balancer-ethereum-weth-multi-block",
+        "pancake-swap-ethereum-weth-500-multi-block",
+        "uniswap-v3-ethereum-weth-500-multi-block"
+      ]
+    },
+    "SOL": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitstamp-usd",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "GM_ETH_WETH_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_BTC_WBTC_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_LINK_LINK_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_UNI_UNI_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_ARB_ARB_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_SOL_SOL_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "rETH": {
+      "source": [
+        "balancer-arbitrumone-weth",
+        "balancer-arbitrumone-wsteth",
+        "balancer-ethereum-weth",
+        "balancer-ethereum-wsteth",
+        "balancer-ethereum-wsteth-2",
+        "curve-ethereum-wsteth",
+        "curve-ethereum-wsteth-2",
+        "pancake-swap-ethereum-weth-500",
+        "uniswap-v3-arbitrumone-weth-500",
+        "uniswap-v3-ethereum-weth-100",
+        "uniswap-v3-ethereum-weth-500"
+      ]
+    },
+    "ETHx": {
+      "source": [
+        "balancer-arbitrumone-wsteth",
+        "balancer-ethereum-wsteth",
+        "curve-ethereum-eth"
+      ]
+    },
+    "weETH": {
+      "source": [
+        "balancer-arbitrumone-wsteth",
+        "balancer-ethereum-reth",
+        "camelot-v3-arbitrumone-weth",
+        "curve-ethereum-weth",
+        "uniswap-v3-arbitrumone-weth-3000",
+        "uniswap-v3-ethereum-weth-100",
+        "uniswap-v3-ethereum-weth-500"
+      ]
+    },
+    "rswETH": {
+      "source": [
+        "balancer-ethereum-ezeth",
+        "balancer-ethereum-weeth",
+        "curve-ethereum-weeth",
+        "pancake-swap-ethereum-weth-500"
+      ]
+    },
+    "rsETH": {
+      "source": [
+        "balancer-arbitrumone-weth",
+        "balancer-ethereum-ethx",
+        "balancer-ethereum-weth",
+        "camelot-v3-arbitrumone-weth",
+        "camelot-v3-arbitrumone-wsteth",
+        "curve-ethereum-sfrxeth",
+        "curve-ethereum-weeth",
+        "uniswap-v3-arbitrumone-wsteth-500",
+        "uniswap-v3-ethereum-weth-500"
+      ]
+    },
+    "CVX": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "okx-usdt"
+      ]
+    },
+    "stETH": {
+      "source": [
+        "bingx-usdt",
+        "bitget-usdt",
+        "coinmarketcap",
+        "curve-ethereum-eth",
+        "curve-ethereum-eth-2",
+        "curve-ethereum-weth",
+        "okx-eth",
+        "uniswap-v2-ethereum-weth"
+      ]
+    },
+    "frxETH": {
+      "source": [
+        "curve-ethereum-cvx",
+        "curve-ethereum-eth",
+        "curve-ethereum-steth",
+        "curve-ethereum-weth",
+        "uniswap-v3-ethereum-frax-10000"
+      ]
+    },
+    "sfrxETH": {
+      "source": ["ethereum-evm-fetcher-frax"]
+    },
+    "ezETH": {
+      "source": [
+        "balancer-arbitrumone-wsteth",
+        "balancer-ethereum-weeth",
+        "balancer-ethereum-weth",
+        "camelot-v3-arbitrumone-weth",
+        "curve-ethereum-weth",
+        "thruster-v3-blast-weth-3000",
+        "thruster-v3-blast-weth-500",
+        "uniswap-v3-ethereum-weth-100",
+        "uniswap-v3-ethereum-wsteth-500"
+      ]
+    },
+    "PENDLE_EZ_ETH_LP": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_SILO_ETH_WSTETH_LP": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_RS_ETH_LP": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_E_ETH_LP": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_WSTETH_LP": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_EZ_ETH_26_09_24": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_RS_ETH_26_09_24": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_E_ETH_26_09_24": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "PENDLE_WSTETH_26_06_25": {
+      "source": ["arbitrum-evm-fetcher-pendle"]
+    },
+    "3Crv": {
+      "source": ["ethereum-evm-fetcher-curve"]
+    },
+    "AAVE": {
+      "source": [
+        "binance-usdt",
+        "bitfinex2-usd",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "uniswap-v3-ethereum-weth-3000",
+        "xt"
+      ]
+    },
+    "crvUSD": {
+      "source": [
+        "curve-arbitrumone-frax",
+        "curve-arbitrumone-wbtc",
+        "curve-arbitrumone-weth",
+        "curve-ethereum-crv",
+        "curve-ethereum-frax",
+        "curve-ethereum-usdc",
+        "curve-ethereum-usde",
+        "curve-ethereum-usdt",
+        "curve-ethereum-weth"
+      ]
+    },
+    "USDe": {
+      "source": [
+        "curve-ethereum-dai",
+        "curve-ethereum-fdusd",
+        "curve-ethereum-frax",
+        "curve-ethereum-usdc",
+        "pancake-swap-ethereum-usdt-100",
+        "uniswap-v3-ethereum-usdt-100"
+      ],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "YY_STG_S*USDC": {
+      "source": ["arbitrum-evm-fetcher-yield-yak"]
+    },
+    "YY_STG_S*USDT": {
+      "source": ["arbitrum-evm-fetcher-yield-yak"]
+    },
+    "YY_STG_S*ETH": {
+      "source": ["arbitrum-evm-fetcher-yield-yak"]
+    },
+    "PRIME": {
+      "source": [
+        "trader-joe-v2-avalanche-wavax",
+        "uniswap-v3-arbitrumone-weth-3000"
+      ]
+    },
+    "ATOM": {
+      "source": [
+        "binance-usdt",
+        "bingx-usdt",
+        "bitget-usdt",
+        "bitmart-usdt",
+        "bitrue-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "lbank-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "NEAR": {
+      "source": [
+        "binance-usdt",
+        "bitget-usdt",
+        "bitrue-usdt",
+        "bybit-usdt",
+        "coinbasepro-usd",
+        "coingecko",
+        "coinmarketcap",
+        "gate-usdt",
+        "kraken-usd",
+        "kucoin-usdt",
+        "okx-usdt",
+        "xt"
+      ]
+    },
+    "GM_ATOM_WETH_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_NEAR_WETH_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_BTC_WBTC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_ETH_WETH": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "GM_GMX_GMX_USDC": {
+      "source": ["arbitrum-evm-fetcher-gmx"]
+    },
+    "sDAI": {
+      "source": ["ethereum-evm-fetcher-savings-dai"]
+    },
+    "FDUSD": {
+      "source": [
+        "binance-bnb",
+        "binance-btc",
+        "binance-eth",
+        "binance-xrp",
+        "bingx-usdt",
+        "pancake-swap-bnb-usdt-100",
+        "pancake-swap-bnb-wbnb-500",
+        "uniswap-v3-ethereum-usdt-100"
+      ]
+    }
+  },
+  "multiPointPackages": {
+    "___ALL_FEEDS___": [
+      "3Crv",
+      "AAVE",
+      "ARB",
+      "ATOM",
+      "AVAX",
+      "BAL",
+      "BNB",
+      "BTC",
+      "EUR",
+      "GBP",
+      "CRV",
+      "CVX",
+      "DAI",
+      "ETH",
+      "ETHx",
+      "FDUSD",
+      "FRAX",
+      "FXS",
+      "GLP",
+      "GMX",
+      "GM_ARB_ARB_USDC",
+      "GM_ATOM_WETH_USDC",
+      "GM_BTC_WBTC",
+      "GM_BTC_WBTC_USDC",
+      "GM_ETH_WETH",
+      "GM_ETH_WETH_USDC",
+      "GM_GMX_GMX_USDC",
+      "GM_LINK_LINK_USDC",
+      "GM_NEAR_WETH_USDC",
+      "GM_SOL_SOL_USDC",
+      "GM_UNI_UNI_USDC",
+      "GRAIL",
+      "JOE",
+      "LINK",
+      "LVL",
+      "MAGIC",
+      "MOO_GMX",
+      "NEAR",
+      "PENDLE_EZ_ETH_LP",
+      "PENDLE_E_ETH_LP",
+      "PENDLE_RS_ETH_LP",
+      "PENDLE_SILO_ETH_WSTETH_LP",
+      "PENDLE_WSTETH_LP",
+      "PENDLE_EZ_ETH_26_09_24",
+      "PENDLE_RS_ETH_26_09_24",
+      "PENDLE_E_ETH_26_09_24",
+      "PENDLE_WSTETH_26_06_25",
+      "PRIME",
+      "SOL",
+      "STG",
+      "SWETH",
+      "UNI",
+      "USDC",
+      "USDC.e",
+      "sUSDe",
+      "USDT",
+      "USDe",
+      "WOO",
+      "YY_STG_S*USDC",
+      "YY_STG_S*USDT",
+      "YY_STG_S*ETH",
+      "YY_WOMBEX_DAI",
+      "YY_WOMBEX_GLP",
+      "YY_WOMBEX_USDC.e",
+      "YY_WOMBEX_USDT",
+      "arbJnrLLP",
+      "arbMzeLLP",
+      "arbSnrLLP",
+      "crvUSD",
+      "ezETH",
+      "frxETH",
+      "rETH",
+      "rsETH",
+      "rswETH",
+      "sfrxETH",
+      "stETH",
+      "weETH",
+      "wstETH",
+      "XRP",
+      "sDAI"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+name: not-a-very-lucky-token-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: not-a-very-lucky-token
+      FLAG: "rctf{lucky_f0r_y0u_m4yb3_h3h3_aec634b53e47a1026285e978}"
+    container_name: not-a-very-lucky-token
+    image: not-a-very-lucky-token
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

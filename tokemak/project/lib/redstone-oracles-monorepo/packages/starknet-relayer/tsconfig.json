@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig-common.json",
+  "include": ["**/*", "src/**/*.json", "package.json"],
+  "references": [
+    {
+      "path": "../starknet-connector/tsconfig.build.json"
+    },
+    {
+      "path": "../sdk/tsconfig.build.json"
+    },
+    {
+      "path": "../utils/tsconfig.build.json"
+    },
+    {
+      "path": "../protocol/tsconfig.build.json"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+name: peer-to-peer-to-me-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: peer-to-peer-to-me
+      FLAG: "rctf{n0w_c0m3s_th3_m0nk3y_0ut_0f_th3_sl33v3_603ec848abe1d54b4b5d6e7c}"
+    container_name: peer-to-peer-to-me
+    image: peer-to-peer-to-me
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

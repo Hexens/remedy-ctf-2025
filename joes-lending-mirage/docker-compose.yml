@@ -1,0 +1,22 @@
+name: joes-lending-mirage-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: joes-lending-mirage
+      FLAG: "rctf{i_b0rr0w3d_th1s_fl4g_4nd_n3v3r_r3turn3d_1t_644fd4c5d7faccf8642e89a1}"
+    container_name: joes-lending-mirage
+    image: joes-lending-mirage
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

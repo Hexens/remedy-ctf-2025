@@ -1,0 +1,37 @@
+{
+  "extends": "../../tsconfig-common.json",
+  "include": [
+    "**/*.ts",
+    "package.json",
+    "src/**/*.json",
+    "artifacts/**/*.sol/*.json",
+    "relayer-manifests/*.json",
+    "relayer-manifests-multi-feed/*.json"
+  ],
+  "references": [
+    {
+      "path": "../evm-connector/tsconfig.build.json"
+    },
+    {
+      "path": "../protocol/tsconfig.build.json"
+    },
+    {
+      "path": "../sdk/tsconfig.build.json"
+    },
+    {
+      "path": "../utils/tsconfig.build.json"
+    },
+    {
+      "path": "../rpc-providers/tsconfig.build.json"
+    },
+    {
+      "path": "../chain-configs/tsconfig.build.json"
+    },
+    {
+      "path": "../on-chain-relayer-common/tsconfig.build.json"
+    },
+    {
+      "path": "../fuel-connector/tsconfig.build.json"
+    }
+  ]
+}

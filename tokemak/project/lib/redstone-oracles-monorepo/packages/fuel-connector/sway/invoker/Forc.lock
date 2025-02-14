@@ -1,0 +1,21 @@
+[[package]]
+name = "common"
+source = "path+from-root-3069D3887FFDBEE6"
+dependencies = ["std"]
+
+[[package]]
+name = "contract_invoker"
+source = "member"
+dependencies = [
+    "common",
+    "std",
+]
+
+[[package]]
+name = "core"
+source = "path+from-root-8357A6DDC5F39D14"
+
+[[package]]
+name = "std"
+source = "git+https://github.com/fuellabs/sway?tag=v0.65.2#66bb430395daf5b8f7205f7b9d8d008e2e812d54"
+dependencies = ["core"]

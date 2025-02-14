@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig-common.json",
+  "references": [
+    {
+      "path": "../protocol/tsconfig.build.json"
+    },
+    {
+      "path": "../sdk/tsconfig.build.json"
+    }
+  ]
+}

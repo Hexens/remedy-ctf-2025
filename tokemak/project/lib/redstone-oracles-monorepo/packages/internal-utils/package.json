@@ -1,0 +1,32 @@
+{
+  "name": "@redstone-finance/internal-utils",
+  "version": "0.6.2",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "yarn global:tsc --build tsconfig.build.json",
+    "build-dev": "yarn global:tsc --build tsconfig.json",
+    "lint": "yarn global:eslint .",
+    "lint:fix": "yarn global:eslint --fix .",
+    "preversion": "yarn build",
+    "push-config-json": "FILENAME=../../terraform/config/$KEY_NAME yarn global:object-pushToBucket",
+    "push-wallets-to-monitor-json": "BUCKET_NAME=redstone-configuration-eu-west-1 KEY_NAME=wallets-to-monitor.json yarn push-config-json"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.485.0",
+    "@aws-sdk/client-lambda": "^3.485.0",
+    "@aws-sdk/client-s3": "^3.485.0",
+    "@aws-sdk/client-ssm": "^3.485.0",
+    "@influxdata/influxdb-client": "^1.35.0",
+    "@influxdata/influxdb-client-apis": "^1.35.0",
+    "@redstone-finance/utils": "0.6.2",
+    "@types/lodash": "^4.14.195",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.12",
+    "lodash": "^4.17.21",
+    "zod": "^3.22.4"
+  }
+}

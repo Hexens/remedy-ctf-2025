@@ -1,0 +1,95 @@
+{
+  "interval": 10000,
+  "priceAggregator": "median",
+  "defaultSource": ["kaiko"],
+  "sourceTimeout": 7000,
+  "minValidSourcesPercentage": 1,
+  "deviationCheck": {
+    "deviationWithRecentValues": {
+      "maxPercent": 30,
+      "maxDelayMilliseconds": 300000
+    }
+  },
+  "tokens": {
+    "ETH": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "BTC": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "USDT": {
+      "source": ["kaiko", "kaiko-v2"],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "USDC": {
+      "source": ["kaiko", "kaiko-v2"],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    },
+    "EUR": {
+      "source": [
+        "bitstamp-api",
+        "bitstamp-usd",
+        "coinbase-api",
+        "ecb",
+        "kaiko",
+        "kaiko-v2",
+        "kraken-gbp",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "GBP": {
+      "source": [
+        "alphavantage-usd",
+        "bitstamp-usd",
+        "ecb",
+        "financialmodelingprep-usd",
+        "kraken-usd",
+        "twelve-data"
+      ]
+    },
+    "AVAX": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "BNB": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "XTZ": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "TRX": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "ATOM": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "CELO": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "TIA": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "FXS": {
+      "source": ["kaiko", "kaiko-v2"]
+    },
+    "DAI": {
+      "source": ["kaiko", "kaiko-v2"],
+      "deviationCheck": {
+        "deviationWithRecentValues": {
+          "maxPercent": 5,
+          "maxDelayMilliseconds": 300000
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig-common.json",
+  "include": [
+    "**/*",
+    "package.json",
+    "src/**/*.json",
+    "artifacts/**/*.sol/*.json"
+  ],
+  "references": [
+    {
+      "path": "../utils/tsconfig.build.json"
+    },
+    {
+      "path": "../evm-multicall/tsconfig.build.json"
+    },
+    {
+      "path": "../chain-configs/tsconfig.build.json"
+    }
+  ]
+}

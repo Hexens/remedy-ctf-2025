@@ -1,0 +1,22 @@
+name: unstable-pool-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: unstable-pool
+      FLAG: "rctf{unst4b1l1ty_s0m3t1m3s_l34d5_t0_st4b1l1ty_e24021b1a7e4b4ab6dee1277}"
+    container_name: unstable-pool
+    image: unstable-pool
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

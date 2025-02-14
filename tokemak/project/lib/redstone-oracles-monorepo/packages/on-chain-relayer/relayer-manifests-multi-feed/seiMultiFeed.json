@@ -1,0 +1,27 @@
+{
+  "chain": {
+    "name": "sei",
+    "id": 1329
+  },
+  "adapterContract": "0x3A236F67Fce401D87D7215695235e201966576E4",
+  "adapterContractType": "multi-feed",
+  "dataServiceId": "redstone-primary-prod",
+  "updateTriggers": {
+    "deviationPercentage": 0.5,
+    "timeSinceLastUpdateInMilliseconds": 21600000
+  },
+  "priceFeeds": {
+    "SEI": {
+      "priceFeedAddress": "0x100c8e61aB3BeA812A42976199Fc3daFbcDD7272"
+    },
+    "ISEI": {
+      "priceFeedAddress": "0xC49F0Dd98F38C525A7ce15E73E60675456F3a161"
+    },
+    "deUSD": {
+      "priceFeedAddress": "0xBf3bA2b090188B40eF83145Be0e9F30C6ca63689"
+    },
+    "ezETH": {
+      "priceFeedAddress": "0x4BAD96DD1C7D541270a0C92e1D4e5f12EEEA7a57"
+    }
+  }
+}

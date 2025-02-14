@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig-common.json",
+  "include": ["**/*", "relayer-manifests/*.json", "package.json"],
+  "references": [
+    {
+      "path": "../ton-connector/tsconfig.build.json"
+    },
+    {
+      "path": "../sdk/tsconfig.build.json"
+    },
+    {
+      "path": "../utils/tsconfig.build.json"
+    },
+    {
+      "path": "../protocol/tsconfig.build.json"
+    }
+  ]
+}

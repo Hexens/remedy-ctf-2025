@@ -1,0 +1,53 @@
+{
+  "name": "@redstone-finance/gelato-relayer",
+  "version": "0.6.2",
+  "description": "RedStone Relayer based on Gelato Web3 Functions",
+  "repository": "https://github.com/redstone-finance/redstone-oracles-monorepo",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist cache",
+    "build": "yarn compile && yarn global:tsc --build tsconfig.build.json",
+    "build-dev": "yarn compile && yarn global:tsc --build tsconfig.json",
+    "compile": "yarn compile-deps && hardhat compile",
+    "compile-deps": "yarn --cwd ../on-chain-relayer compile && yarn --cwd ../rpc-providers build",
+    "lint": "yarn global:eslint .",
+    "lint:fix": "yarn global:eslint --fix .",
+    "test": "hardhat test",
+    "sample-contract-compile": "hardhat compile --force",
+    "sample-contract-deploy": "hardhat deploy",
+    "w3f-run": "yarn build && hardhat w3f-run redstone --debug --logs",
+    "w3f-deploy": "yarn build && hardhat w3f-deploy redstone | tee /dev/tty | ts-node save-deploy-cid.ts"
+  },
+  "dependencies": {
+    "@gelatonetwork/web3-functions-sdk": "^2.4.3",
+    "@redstone-finance/on-chain-relayer": "0.6.2"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@ethersproject/abi": "^5.6.3",
+    "@ethersproject/providers": "^5.6.8",
+    "@nomicfoundation/hardhat-chai-matchers": "1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.9",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
+    "@openzeppelin/contracts": "^4.8.1",
+    "@redstone-finance/rpc-providers": "0.6.2",
+    "@tsconfig/recommended": "1.0.2",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/sinon-chai": "^3.2.12",
+    "axios": "^1.7.7",
+    "chai": "^4.3.10",
+    "dotenv": "^16.0.3",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.17.2",
+    "hardhat-deploy": "0.11.23",
+    "mocha": "^10.2.0",
+    "ts-generator": "0.1.1",
+    "typechain": "^8.1.1",
+    "typescript": "^5.5.4"
+  }
+}

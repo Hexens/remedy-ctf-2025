@@ -1,0 +1,15 @@
+[project]
+authors = ["Łukasz Kalbarczyk"]
+entry = "prices.sw"
+forc-version = "0.65.2"
+license = "Apache-2.0"
+name = "prices"
+organization = "RedStone"
+
+[dependencies]
+common = { path = "../common" }
+redstone = { path = "../redstone-fuel-sdk" }
+
+[proxy]
+address = "0x6c6020e293bded85a5db6ab57d9f41e9401c6576a58d4362ea26f373450c3acd"
+enabled = true

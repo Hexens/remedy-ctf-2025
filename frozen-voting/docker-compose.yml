@@ -1,0 +1,22 @@
+name: frozen-voting-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: frozen-voting
+      FLAG: "rctf{y0u_n33d_s0m3_1c3_0n_th4t_?_e86b973e9e830a7cf70c8dbf}"
+    container_name: frozen-voting
+    image: frozen-voting
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

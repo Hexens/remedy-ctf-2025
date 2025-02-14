@@ -1,0 +1,22 @@
+name: diamond-heist-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: diamond-heist
+      FLAG: "rctf{m1ss10n_n0t_th4t_1mp0ss1bl3_f9992a6d1710843ecf50497a}"
+    container_name: diamond-heist
+    image: diamond-heist
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

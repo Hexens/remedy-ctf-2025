@@ -1,0 +1,67 @@
+#include "stdlib.fc";
+
+#include "utils/contract_flow.fc";
+#include "utils/contract_constants.fc";
+
+#include "redstone/constants.fc";
+
+global int feed_id;
+global slice adapter_address_slice;
+global int price;
+global int timestamp;
+
+() load_data() impure {
+    var ds = get_data().begin_parse();
+
+    feed_id = ds~load_uint(DATA_FEED_ID_BITS);
+    adapter_address_slice = ds~load_msg_addr();
+    price = ds~load_uint(MAX_VALUE_SIZE_BITS);
+    timestamp = ds~load_uint(TIMESTAMP_BITS);
+}
+
+() save_data() impure inline {
+    set_data(begin_cell()
+    .store_uint(feed_id, DATA_FEED_ID_BITS)
+    .store_slice(adapter_address_slice)
+    .store_uint(price, MAX_VALUE_SIZE_BITS)
+    .store_uint(timestamp, TIMESTAMP_BITS)
+    .end_cell());
+}
+
+() recv_internal(int, int, cell in_msg_full, slice in_msg_body) impure {
+    (int op, slice cs) = in_msg_body~init(in_msg_full);
+
+    load_data();
+
+    if (op == OP_REDSTONE_FETCH_DATA) {
+        return cs~send_forward_message(OP_REDSTONE_FETCH_DATA, adapter_address_slice, begin_cell().store_uint(feed_id, DATA_FEED_ID_BITS));
+    }
+
+    if (op == OP_REDSTONE_DATA_FETCHED) {
+        slice initial_sender = in_msg_body~verify_return_message(cs, adapter_address_slice);
+
+        price = in_msg_body~load_uint(MAX_VALUE_SIZE_BITS);
+        timestamp = in_msg_body~load_uint(TIMESTAMP_BITS);
+
+        save_data();
+
+        return send_carry_message_to_addr(initial_sender);
+    }
+
+    if (op == OP_REDSTONE_READ_DATA) {
+        builder content = in_msg_body.builder_with_preloaded_ref()
+                .store_uint(feed_id, DATA_FEED_ID_BITS)
+                .store_uint(price, MAX_VALUE_SIZE_BITS)
+                .store_uint(timestamp, TIMESTAMP_BITS);
+
+        return cs~send_return_message(OP_REDSTONE_DATA_READ, content);
+    }
+}
+
+;; =============== getters =============================
+
+(int, int) get_price_and_timestamp() method_id {
+    load_data();
+
+    return (price, timestamp);
+}

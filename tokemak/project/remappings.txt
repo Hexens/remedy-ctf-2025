@@ -1,0 +1,7 @@
+forge-std/=lib/forge-std/src/
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-ctf/=lib/forge-ctf/src/
+openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/
+prb-math/=lib/prb-math/
+usingtellor/=lib/usingtellor/contracts/
+redstone-finance/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/

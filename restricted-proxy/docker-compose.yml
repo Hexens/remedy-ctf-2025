@@ -1,0 +1,36 @@
+name: restricted-proxy-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: restricted-proxy
+      FLAG: "rctf{n0_r3str1ct10n5_8ae67f5c92d702dc72a0f76f}"
+    container_name: restricted-proxy
+    image: restricted-proxy
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  backend:
+    container_name: restricted-proxy-backend
+    image: restricted-proxy-backend
+    build:
+      context: ./backend/
+    command: node src/server.js
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

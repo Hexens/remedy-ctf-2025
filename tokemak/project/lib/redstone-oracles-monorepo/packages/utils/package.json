@@ -1,0 +1,26 @@
+{
+  "name": "@redstone-finance/utils",
+  "version": "0.6.2",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "test": "yarn global:jest:cov",
+    "build": "yarn global:tsc --build tsconfig.build.json",
+    "build-dev": "yarn global:tsc --build tsconfig.json",
+    "preversion": "yarn build",
+    "lint": "yarn global:eslint .",
+    "lint:fix": "yarn global:eslint --fix ."
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "consola": "^2.15.3",
+    "decimal.js": "^10.4.3",
+    "ethers": "^5.7.2",
+    "zod": "^3.22.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

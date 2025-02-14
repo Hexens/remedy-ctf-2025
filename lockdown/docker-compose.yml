@@ -1,0 +1,22 @@
+name: lockdown-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: lockdown
+      FLAG: "rctf{y0u_th0ught_c0v1d_l0ckd0wn_w4s_b4d_?_fb6da223b9391df31be0a812}"
+    container_name: lockdown
+    image: lockdown
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

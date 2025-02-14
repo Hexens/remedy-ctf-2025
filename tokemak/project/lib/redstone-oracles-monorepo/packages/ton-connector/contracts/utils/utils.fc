@@ -1,0 +1,9 @@
+(builder) store_slice_as_ref(builder content, slice sender_address) {
+    cell forward_payload = begin_cell().store_slice(sender_address).end_cell();
+
+    return content.store_ref(forward_payload);
+}
+
+(builder) builder_with_preloaded_ref(slice in_msg_body) {
+    return in_msg_body.slice_refs_empty?() ? begin_cell() : begin_cell().store_ref(in_msg_body.preload_ref());
+}

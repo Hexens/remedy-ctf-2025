@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "scripts",
+    "hardhat.config.ts",
+    "artifacts/build-info"
+  ],
+  "references": [
+    {
+      "path": "../utils/tsconfig.build.json"
+    },
+    {
+      "path": "../internal-utils/tsconfig.build.json"
+    }
+  ]
+}

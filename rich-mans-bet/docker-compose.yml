@@ -1,0 +1,22 @@
+name: rich-mans-bet-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: rich-mans-bet
+      FLAG: "rctf{p0w3r_t0_th3_h4ck3r5_bee18070cb4277cb84669a70}"
+    container_name: rich-mans-bet
+    image: rich-mans-bet
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

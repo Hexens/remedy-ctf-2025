@@ -1,0 +1,22 @@
+name: world-of-memecraft-challenge
+services:
+  launcher:
+    environment:
+      CHALLENGE: world-of-memecraft
+      FLAG: "rctf{g0ldsh1r3_r0l3pl4y1ng_g0n3_wr0ng_?_f2737fdba03615b92a2076f0}"
+    container_name: world-of-memecraft
+    image: world-of-memecraft
+    build:
+      context: .
+      target: chroot
+    command: socat TCP-LISTEN:1337,reuseaddr,fork exec:"python3 -u challenge/challenge.py"
+    expose:
+      - 1337
+    ports:
+      - "1337:1337"
+    networks:
+      - ctf_network
+networks:
+  ctf_network:
+    name: remedyctf
+    external: true

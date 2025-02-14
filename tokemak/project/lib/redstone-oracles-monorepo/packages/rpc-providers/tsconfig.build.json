@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "artifacts/**/*.sol/*.json",
+    "hardhat.config.ts"
+  ],
+  "references": [
+    {
+      "path": "../utils/tsconfig.build.json"
+    },
+    {
+      "path": "../evm-multicall/tsconfig.build.json"
+    },
+    {
+      "path": "../chain-configs/tsconfig.build.json"
+    }
+  ]
+}
