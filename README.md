@@ -2,6 +2,10 @@
 
 These are the source files for the challenges of [Remedy CTF 2025](https://ctf.r.xyz/).
 
+## Write-ups
+
+- [ChainLight](https://github.com/theori-io/ctf/tree/master/2025/remedyctf)
+
 ## Running it locally
 
 1. Install Docker.
